@@ -4,7 +4,7 @@ from django.shortcuts import render, HttpResponse
 
 
 
-def paginaPrincipal(request):
+def principal(request):
     
     return render( request, "inicio/principal.html")
 

@@ -11,6 +11,7 @@ class Cursos(models.Model):
     nombre = models.TextField(max_length=20,verbose_name="Nombre completo")
     #edad = models.IntegerField()
     curso = models.TextField(max_length=20,verbose_name="Nombre del curso")
+    imagen = models.ImageField(null=True,upload_to="fotos",verbose_name="Fotografía")
     email = models.EmailField(max_length=200,verbose_name="Correo Electrónico")
     tiempo = models.BooleanField(
         default=False,verbose_name="Deseas obtener el curso intensivo")
