@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Principal',
     'cursos.apps.CursosConfig',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,19 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Archivos fotográficos
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+#CKEDITOR
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar':'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['Styles', 'Format'],
+            [ 'Image', 'Table', 'HorizontalRule', 'SpecialChar'],
+            ['JustifyLeft', 'JustifyCenter', 'JustifyRight','JustifyBlock'],
+            ['Link', 'Unlink', 'Anchor' ],
+            ['Cut', 'Copy', 'Paste', 'PasteText', 'PastFromWord', '-', 'Undo', 'Redo' ],
+            ['Maximize' ],
+        ] 
+    }
+}
